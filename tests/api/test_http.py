@@ -26,6 +26,7 @@ def test_third_request():
     print(f"Response is {r.text}")
 
     assert r.status_code == 200
+    assert r.headers['Content-Length'] == '14'
 
 
 @pytest.mark.http
