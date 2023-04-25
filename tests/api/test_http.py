@@ -31,6 +31,6 @@ def test_third_request():
 
 @pytest.mark.http
 def test_status_code_request():
-    r = requests.get('https://api.github.com/users/oleksandr_solomianiuk')
+    r = requests.get('https://api.github.com/users/not_existing_user')
 
     assert r.status_code == 404
